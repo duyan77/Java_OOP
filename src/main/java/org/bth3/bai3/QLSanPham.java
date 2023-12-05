@@ -29,7 +29,7 @@ public class QLSanPham {
         this.listSanPham.removeIf(sanPham -> sanPham.getMa() == id);
     }
 
-    // xoa sản phẩm theo tên của sản phẩm
+    // xóa sản phẩm theo tên của sản phẩm
     public void xoa(String ten) {
         this.listSanPham.removeIf(sanPham -> sanPham.getTen().equalsIgnoreCase(ten));
     }
