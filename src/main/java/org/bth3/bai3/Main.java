@@ -31,8 +31,10 @@ public class Main {
         } catch (NullPointerException e) {
             System.err.println("Khong tim thay san pham theo id");
         }
-        // xóa sản phẩm thứ 1
-        ql.xoa(1);
+
+        ql.xoa(1); // xóa sản phẩm có id 1
+        ql.xoa("OU"); // xóa sản phẩm có tên "OU"
+        ql.xoa(s1); // xóa sản phẩm s1
 
         // sắp xếp sản phẩm theo giá bán giảm dần
         System.out.println("==Danh sach san pham theo gia giam dan==");
