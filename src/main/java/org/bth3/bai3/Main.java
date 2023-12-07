@@ -26,7 +26,7 @@ public class Main {
         }
 
         try {
-            ql.timKiem(0).hienThi(); // tìm kiếm theo id 0
+            ql.timKiem(1).hienThi(); // tìm kiếm theo id 1
             ql.timKiem("O").forEach(SanPham::hienThi); // tìm kiếm theo tên chứa "O"
         } catch (NullPointerException e) {
             System.err.println("Khong tim thay san pham theo id");
