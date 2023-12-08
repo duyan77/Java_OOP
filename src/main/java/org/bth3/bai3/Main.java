@@ -21,7 +21,7 @@ public class Main {
         } catch (Exception e) {
             System.err.println("Them san pham khong thanh cong!!!");
         } finally {
-            System.out.println("==Danh sach " + SanPham.getProductsQuantity() + " san pham==");
+            System.out.println("==Danh sach " + SanPham.getProductQuantity() + " san pham==");
             ql.hienThi();
         }
 

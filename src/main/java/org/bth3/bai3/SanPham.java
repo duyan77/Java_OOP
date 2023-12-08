@@ -1,8 +1,8 @@
 package org.bth3.bai3;
 
 public class SanPham {
-    private static int PRODUCTS_QUANTITY = 0;
-    private final int ma = ++PRODUCTS_QUANTITY;
+    private static int productQuantity = 0;
+    private final int ma = ++productQuantity;
     private String ten;
     private double gia;
 
@@ -14,8 +14,8 @@ public class SanPham {
         this.gia = gia;
     }
 
-    public static int getProductsQuantity() {
-        return PRODUCTS_QUANTITY;
+    public static int getProductQuantity() {
+        return productQuantity;
     }
 
     public int getMa() {
