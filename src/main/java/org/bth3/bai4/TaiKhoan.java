@@ -13,8 +13,7 @@ public class TaiKhoan {
         this.usedId = String.format("%05d", ++count);
     }
 
-    public TaiKhoan(String usedId, String userName, String phoneNumber, String email, double balance, LocalDate dateCreated, String status) {
-        this.usedId = usedId;
+    public TaiKhoan(String userName, String phoneNumber, String email, double balance, LocalDate dateCreated, String status) {
         this.userName = userName;
         this.phoneNumber = phoneNumber;
         this.email = email;
