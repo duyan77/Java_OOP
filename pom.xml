@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.duyan</groupId>
-    <artifactId>ThucHanh</artifactId>
+    <artifactId>thuchanhoop</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

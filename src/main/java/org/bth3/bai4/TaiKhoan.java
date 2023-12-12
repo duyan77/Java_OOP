@@ -3,14 +3,14 @@ package org.bth3.bai4;
 import java.time.LocalDate;
 
 public class TaiKhoan {
-    private static int COUNT;
+    private static int count;
     private String usedId, userName, phoneNumber, email;
     private double balance;
     private LocalDate dateCreated;
     private String status;
 
     {
-        this.usedId = String.format("%05d", ++COUNT);
+        this.usedId = String.format("%05d", ++count);
     }
 
     public TaiKhoan(String usedId, String userName, String phoneNumber, String email, double balance, LocalDate dateCreated, String status) {
@@ -23,14 +23,14 @@ public class TaiKhoan {
         this.status = status;
     }
 
-    // getter, setter
+// --------------------------------- getter, setter -----------------------------------------------
 
-    public static int getCOUNT() {
-        return COUNT;
+    public static int getCount() {
+        return count;
     }
 
-    public static void setCOUNT(int COUNT) {
-        TaiKhoan.COUNT = COUNT;
+    public static void setCount(int count) {
+        TaiKhoan.count = count;
     }
 
     public String getUsedId() {
@@ -88,4 +88,6 @@ public class TaiKhoan {
     public void setStatus(String status) {
         this.status = status;
     }
+//    --------------------------- end getter, setter ---------------------------------------------
+
 }
