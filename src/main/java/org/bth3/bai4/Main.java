@@ -1,16 +1,14 @@
 package org.bth3.bai4;
 
-import java.time.LocalDate;
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        TaiKhoanKyHan acc = new TaiKhoanKyHan("Bank01", "duyan", "0774126944", "abc@gmail.com", 100,
-                LocalDate.of(2023, 11, 26), "ok", KyHan.MOT_TUAN);
+        TaiKhoan t1 = new TaiKhoan("Nguyen Van A", 100);
+        TaiKhoan t2 = new TaiKhoanKyHan("Tran Thi B", 1000, KyHan.MOT_TUAN);
+        TaiKhoan t3 = new TaiKhoanKyHan("Tran Thi B", 2000, KyHan.MOT_THANG);
 
-        System.out.println("acc.withDraw(50) = " + acc.withDraw(50));
-        sc.close();
+        t1.hienThi();
+        t2.hienThi();
+        t3.hienThi();
     }
 }
