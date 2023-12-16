@@ -11,11 +11,7 @@ public class TaiKhoanKyHan extends TaiKhoan {
         super(ten, soTien);
         this.ngayDaoHan = LocalDate.now();
         this.kyHan = kyHan;
-
-        switch (kyHan) {
-            case MOT_TUAN -> this.ngayDaoHan = this.ngayDaoHan.plusWeeks(1);
-            case MOT_THANG -> this.ngayDaoHan = this.ngayDaoHan.plusMonths(1);
-        }
+        this.ngayDaoHan = kyHan.tinhDaoHan(LocalDate.now());
     }
 
     public LocalDate getNgayDaoHan() {
@@ -41,5 +37,20 @@ public class TaiKhoanKyHan extends TaiKhoan {
                 this.kyHan,
                 ngayDaoHan.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
         );
+    }
+
+    @Override
+    public boolean isDaoHan() {
+        return LocalDate.now().equals(this.ngayDaoHan);
+    }
+
+    @Override
+    public double tinhLaiSuat() {
+        return this.kyHan.tinhLai(this.getSoTien());
+    }
+
+    @Override
+    public void capNhatKyHan() {
+        this.ngayDaoHan = this.kyHan.tinhDaoHan(this.ngayDaoHan);
     }
 }

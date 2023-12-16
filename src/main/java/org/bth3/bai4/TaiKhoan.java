@@ -36,17 +36,33 @@ public class TaiKhoan {
     }
 
     public void hienThi() {
-        System.out.printf("So tai khoan: %s\nTen tai khoan: %s\nSo Tien: %.1f\n", this.id, this.ten,
+        System.out.printf("So tai khoan: %s\nTen tai khoan: %s\nSo Tien: %.1f\nTien Lai: ",
+                this.id,
+                this.ten,
                 this.soTien);
+        System.out.println("Tien lai = " + this.tinhLaiSuat());
     }
 
-    public static void main(String[] args) {
-        TaiKhoan t1 = new TaiKhoan("Nguyen Van A", 100);
-        TaiKhoan t2 = new TaiKhoanKyHan("Tran Thi B", 1000, KyHan.MOT_TUAN);
-        TaiKhoan t3 = new TaiKhoanKyHan("Vo Van C", 2000, KyHan.MOT_THANG);
+    // nap tien vao tai khoan
+    public void napTien(double tienNap) {
+        if (this.isDaoHan())
+            this.soTien += tienNap;
+    }
 
-        t1.hienThi();
-        t2.hienThi();
-        t3.hienThi();
+    public void rutTien(double tienRut) {
+        if (this.soTien >= tienRut && this.isDaoHan())
+            this.soTien -= tienRut;
+    }
+
+    public boolean isDaoHan() {
+        return true;
+    }
+
+    public double tinhLaiSuat() {
+        return (this.soTien * 0.0001) / 12;
+    }
+
+    public void capNhatKyHan() {
+
     }
 }
